@@ -6,34 +6,35 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 18:37:19 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 14:58:31 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/05 18:19:50 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_uint		ft_strlcpy(char *dest, char *src, t_uint destsize)
+size_t		ft_strlcpy(char *restrict dst, const char *restrict src,
+				size_t dstsize)
 {
-	t_uint	i;
-	int		flag_reach_destsize;
+	size_t	i;
+	int		flag_reach_dstsize;
 
-	if (destsize > 0)
-		flag_reach_destsize = 0;
+	if (dstsize > 0)
+		flag_reach_dstsize = 0;
 	else
-		flag_reach_destsize = 1;
+		flag_reach_dstsize = 1;
 	i = 0;
 	while (src[i] != '\0')
 	{
-		if (i == destsize - 1)
+		if (i == dstsize - 1)
 		{
-			dest[destsize - 1] = '\0';
-			flag_reach_destsize = 1;
+			dst[dstsize - 1] = '\0';
+			flag_reach_dstsize = 1;
 		}
-		if (flag_reach_destsize == 0)
-			dest[i] = src[i];
+		if (flag_reach_dstsize == 0)
+			dst[i] = src[i];
 		i++;
 	}
-	if (flag_reach_destsize == 0)
-		dest[i] = '\0';
+	if (flag_reach_dstsize == 0)
+		dst[i] = '\0';
 	return (i);
 }
