@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 20:07:11 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 06:29:26 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 # include <stdlib.h>
 
+void		ft_bzero(void *s, size_t n);
 void		*ft_memset(void *b, int c, size_t len);
+void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void		*ft_memccpy(void *restrict dst, const void *restrict src,
+				int c, size_t n);
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
