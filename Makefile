@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/05 12:23:25 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/05 14:30:20 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,13 @@ HEADERS			:= $(addprefix $(HEADERDIR)/,$(HEADERNAME))
 OUTPUTNAME		:= libft.a
 OUTPUTDIR		:= .
 OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
+TESTDIR			:= .
+TESTNAME		:= test.out
+TESTSRCNAME		:= test.c
+TESTINCLUDENAME	:= test_strlen.c
+TESTS			:= $(addprefix $(TESTDIR)/,$(TESTNAME))
+TESTSRCS		:= $(addprefix $(TESTDIR)/,$(TESTSRCNAME))
+TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))
 
 .SUFFIXES:		.o .c
 
@@ -34,7 +41,7 @@ $(OUTPUTNAME):	$(OBJS) $(HEADERS)
 				ar cr $(OUTPUTS) $(OBJS)
 
 .c.o:
-				$(CC) $(CFLAGS) -c $< -o $(patsubst %.c,%.o,$<)
+				$(CC) $(CFLAGS) -I$(HEADERDIR) -c $< -o $(patsubst %.c,%.o,$<)
 
 .PHONY:			clean
 clean:
@@ -46,6 +53,9 @@ fclean:			clean
 
 .PHONY:			re
 re:				fclean all
+
+$(TESTNAME):	$(OUTPUTS) $(TESTSRCS) $(TESTINCLUDES)
+				$(CC) $(CFLAGS) $(TESTSRCS) -include $(TESTINCLUDES) -L. -lft -o $(TESTS)
 
 .PHONY:			debug
 debug:
