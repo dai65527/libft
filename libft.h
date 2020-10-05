@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 18:14:33 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/05 18:45:58 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
+
+int			ft_toupper(int c);
+int			ft_tolower(int c);
 
 int			ft_strlen(const char *s);
 size_t		ft_strlcpy(char *restrict dst, const char *restrict src,
