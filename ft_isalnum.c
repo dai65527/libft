@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 17:55:05 by dnakano          ###   ########.fr       */
+/*   Created: 2020/10/05 17:52:11 by dnakano           #+#    #+#             */
+/*   Updated: 2020/10/05 17:53:17 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-typedef	unsigned int	t_uint;
-
-int	    	ft_isalpha(int c);
-int	    	ft_isdigit(int c);
-int	    	ft_isalnum(int c);
-int	    	ft_isascii(int c);
-int	    	ft_isprint(int c);
-
-int			ft_strlen(char *str);
-t_uint		ft_strlcpy(char *dest, char *src, t_uint destsize);
-t_uint  	ft_strlcat(char *dest, char *src, t_uint size);
-
-#endif
+int		ft_isalnum(int c)
+{
+	if ('A' <= c && c <= 'Z')
+		return (1);
+	if ('a' <= c && c <= 'z')
+		return (1);
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
+}

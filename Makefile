@@ -6,14 +6,14 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/05 16:56:09 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/05 17:59:48 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				:= gcc
 CFLAGS			:= -Wall -Werror -Wextra
 SRCNAME			:= ft_strlen.c ft_strlcpy.c ft_strlcat.c \
-				   ft_isalpha.c
+				   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
 SRCDIR			:= .
 SRCS			:= $(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:= $(SRCNAME:%.c=%.o)
