@@ -6,13 +6,13 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/05 15:39:07 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/05 16:08:42 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				:= gcc
 CFLAGS			:= -Wall -Werror -Wextra
-SRCNAME			:= ft_strlen.c ft_strlcpy.c
+SRCNAME			:= ft_strlen.c ft_strlcpy.c ft_strlcat.c
 SRCDIR			:= .
 SRCS			:= $(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:= $(SRCNAME:%.c=%.o)
@@ -27,7 +27,7 @@ OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
 TESTDIR			:= .
 TESTNAME		:= test.out
 TESTSRCNAME		:= test.c
-TESTINCLUDENAME	:= test_strlen.c test_strlcpy.c
+TESTINCLUDENAME	:= test_strlen.c test_strlcpy.c test_strlcat.c
 TESTS			:= $(addprefix $(TESTDIR)/,$(TESTNAME))
 TESTSRCS		:= $(addprefix $(TESTDIR)/,$(TESTSRCNAME))
 TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))

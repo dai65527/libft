@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 15:46:58 by dnakano          ###   ########.fr       */
+/*   Created: 2020/10/05 14:45:05 by dnakano           #+#    #+#             */
+/*   Updated: 2020/10/05 14:56:48 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-typedef	unsigned int	t_uint;
+t_uint	ft_strlcat(char *dest, char *src, t_uint size)
+{
+	t_uint	i;
 
-int			ft_strlen(char *str);
-t_uint		ft_strlcpy(char *dest, char *src, t_uint destsize);
-t_uint  	ft_strlcat(char *dest, char *src, t_uint size);
-
-#endif
+	i = 0;
+	while (dest[i] != '\0' && i < size)
+		i++;
+	if (dest[i] == '\0' && i != size)
+		return (ft_strlcpy(dest + i, src, size - i) + i);
+	return (i + ft_strlen(src));
+}
