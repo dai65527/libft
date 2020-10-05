@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 16:43:29 by dnakano          ###   ########.fr       */
+/*   Created: 2020/10/05 16:22:27 by dnakano           #+#    #+#             */
+/*   Updated: 2020/10/05 16:59:10 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-typedef	unsigned int	t_uint;
-
-int	    	ft_isalpha(int c);
-
-int			ft_strlen(char *str);
-t_uint		ft_strlcpy(char *dest, char *src, t_uint destsize);
-t_uint  	ft_strlcat(char *dest, char *src, t_uint size);
-
-#endif
+int		ft_isalpha(int c)
+{
+	if ('A' <= c && c <= 'Z')
+		return (1);
+	if ('a' <= c && c <= 'z')
+		return (1);
+	return (0);
+}

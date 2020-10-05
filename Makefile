@@ -6,13 +6,14 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/05 16:08:42 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/05 16:56:09 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				:= gcc
 CFLAGS			:= -Wall -Werror -Wextra
-SRCNAME			:= ft_strlen.c ft_strlcpy.c ft_strlcat.c
+SRCNAME			:= ft_strlen.c ft_strlcpy.c ft_strlcat.c \
+				   ft_isalpha.c
 SRCDIR			:= .
 SRCS			:= $(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:= $(SRCNAME:%.c=%.o)
@@ -27,7 +28,7 @@ OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
 TESTDIR			:= .
 TESTNAME		:= test.out
 TESTSRCNAME		:= test.c
-TESTINCLUDENAME	:= test_strlen.c test_strlcpy.c test_strlcat.c
+TESTINCLUDENAME	:= test_strlen.c test_strlcpy.c test_strlcat.c test_isxxx.c
 TESTS			:= $(addprefix $(TESTDIR)/,$(TESTNAME))
 TESTSRCS		:= $(addprefix $(TESTDIR)/,$(TESTSRCNAME))
 TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))
@@ -54,7 +55,8 @@ fclean:			clean
 .PHONY:			re
 re:				fclean all
 
-$(TESTNAME):	$(OUTPUTS) $(TESTSRCS) $(TESTINCLUDES)
+$(TESTNAME):	$(OUTPUTS) $(TESTSRCS) $(TESTINCLUDES) $(OUTPUTNAME)
+				rm -f $(TESTS)
 				$(CC) $(CFLAGS) $(TESTSRCS) $(addprefix -include ,$(TESTINCLUDES)) -L. -lft -o $(TESTS)
 
 .PHONY:			debug
