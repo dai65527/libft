@@ -6,11 +6,10 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 08:31:16 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 10:31:58 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 19:40:43 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

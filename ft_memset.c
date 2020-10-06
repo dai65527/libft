@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 20:16:03 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 17:44:15 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 19:41:19 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		*ft_memset(void *b, int c, size_t len)
 
 	b_uchar = (void *)b;
 	i = 0;
-	while(i < len)
+	while (i < len)
 		b_uchar[i++] = c;
 	return (b);
 }

@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 11:31:17 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 12:26:15 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 19:41:27 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] || !c)
 	{
-		if(s[i] == (char)c)
+		if (s[i] == (char)c)
 			return ((char *)(s + i));
 		i++;
 	}
