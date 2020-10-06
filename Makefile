@@ -6,13 +6,13 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/06 09:47:38 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/06 11:24:29 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC				:= gcc
 CFLAGS			:= -Wall -Werror -Wextra
-SRCNAME			:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
+SRCNAME			:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c\
 				   ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c \
 				   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 				   ft_toupper.c ft_tolower.c
@@ -30,7 +30,7 @@ OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
 TESTDIR			:= .
 TESTNAME		:= test.out
 TESTSRCNAME		:= test.c
-TESTINCLUDENAME	:= test_memset.c test_bzero.c test_memcpy.c test_memccpy.c test_memmove.c test_strlen.c test_strlcpy.c test_strlcat.c test_strncmp.c test_isxxx.c test_toxxx.c
+TESTINCLUDENAME	:= test_memset.c test_bzero.c test_memcpy.c test_memccpy.c test_memmove.c test_memchr.c test_strlen.c test_strlcpy.c test_strlcat.c test_strncmp.c test_isxxx.c test_toxxx.c
 TESTS			:= $(addprefix $(TESTDIR)/,$(TESTNAME))
 TESTSRCS		:= $(addprefix $(TESTDIR)/,$(TESTSRCNAME))
 TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))
