@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 17:25:13 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 18:17:10 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			ft_isspace(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 
-int			ft_strlen(const char *s);
+size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *restrict dst, const char *restrict src,
 				size_t dstsize);
 size_t		ft_strlcat(char *restrict dst, const char *restrict src,
@@ -46,6 +46,7 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *haystack, const char *needle,
 				size_t len);
+char		*ft_strdup(const char *s1);
 
 int			ft_atoi(const char *str);
 
