@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 18:45:33 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 20:47:03 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 
 typedef unsigned char	t_uchar;
+typedef unsigned int	t_uint;
 
 void		ft_bzero(void *s, size_t n);
 void		*ft_memset(void *b, int c, size_t len);
@@ -51,5 +52,7 @@ char		*ft_strdup(const char *s1);
 int			ft_atoi(const char *str);
 
 void		*ft_calloc(size_t count, size_t size);
+
+char		*ft_substr(char const *s, t_uint start, size_t len);
 
 #endif
