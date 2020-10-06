@@ -6,16 +6,18 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 14:33:28 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 12:46:12 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 18:31:16 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t		ft_strlen(const char *s)
 {
-	int count;
+	size_t count;
 
 	count = 0;
-	while (*(str++))
+	while (*(s++))
 		count++;
 	return (count);
 }
