@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:57:27 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 22:21:29 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/07 07:56:14 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,14 @@
 char		*ft_substr(char const *s, t_uint start, size_t len)
 {
 	size_t	i;
+	size_t	s_len;
 	char	*substr;
 
+	s_len = ft_strlen(s);
+	if (s_len < start)
+		len = 0;
+	else if (len > s_len - start)
+		len = s_len - start;
 	substr = (char *)malloc(len + 1);
 	if (!substr)
 		return (NULL);
@@ -24,8 +30,6 @@ char		*ft_substr(char const *s, t_uint start, size_t len)
 	while (i < len)
 	{
 		substr[i] = s[i + start];
-		if (!s[i + start])
-			return (substr);
 		i++;
 	}
 	substr[len] = 0;

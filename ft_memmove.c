@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 08:31:16 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 19:40:43 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/07 07:01:40 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*dst_c;
 	char	*src_c;
 
+	if (!dst && !src)
+		return (NULL);
 	dst_c = (char *)dst;
 	src_c = (char *)src;
 	if (dst_c <= src_c || (size_t)(dst_c - src_c) >= len)

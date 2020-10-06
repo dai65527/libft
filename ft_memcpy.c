@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 05:41:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 19:40:27 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/07 06:56:33 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	char	*dst_c;
 	char	*src_c;
 
+	if (!dst && !src)
+		return (NULL);
 	dst_c = (char *)dst;
 	src_c = (char *)src;
 	i = 0;
