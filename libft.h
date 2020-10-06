@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 18:17:10 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/06 18:45:33 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ char		*ft_strnstr(const char *haystack, const char *needle,
 char		*ft_strdup(const char *s1);
 
 int			ft_atoi(const char *str);
+
+void		*ft_calloc(size_t count, size_t size);
 
 #endif
