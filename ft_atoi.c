@@ -6,16 +6,17 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 15:42:08 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 17:37:23 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/07 21:03:04 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "libft.h"
 
 int			ft_atoi(const char *str)
 {
-	int		sign;
-	int		abs;
+	int				sign;
+	unsigned long	abs;
 
 	sign = 1;
 	abs = 0;
@@ -29,6 +30,12 @@ int			ft_atoi(const char *str)
 		str++;
 	}
 	while (ft_isdigit(*str))
+	{
 		abs = abs * 10 + *(str++) - '0';
-	return (sign * abs);
+		if (abs >= (unsigned long)(-LONG_MIN) && sign < 0)
+			return ((int)(LONG_MIN));
+		else if (abs >= LONG_MAX && sign > 0)
+			return ((int)(LONG_MAX));
+	}
+	return ((int)(sign * abs));
 }
