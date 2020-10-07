@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/07 13:58:47 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/07 15:06:19 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCNAME			:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_mem
 				   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_isspace.c\
 				   ft_toupper.c ft_tolower.c\
 				   ft_atoi.c ft_calloc.c\
-				   ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c
+				   ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c
 SRCDIR			:= .
 SRCS			:= $(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:= $(SRCNAME:%.c=%.o)
@@ -32,7 +32,7 @@ OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
 TESTDIR			:= .
 TESTNAME		:= test.out
 TESTSRCNAME		:= test.c
-TESTINCLUDENAME	:= test_memset.c test_bzero.c test_memcpy.c test_memccpy.c test_memmove.c test_memchr.c test_memcmp.c test_strnstr.c test_strlen.c test_strlcpy.c test_strlcat.c test_strncmp.c test_strxchr.c test_strdup.c test_isxxx.c test_toxxx.c test_atoi.c test_calloc.c test_substr.c test_strjoin.c test_split.c test_strtrim.c test_itoa.c
+TESTINCLUDENAME	:= test_memset.c test_bzero.c test_memcpy.c test_memccpy.c test_memmove.c test_memchr.c test_memcmp.c test_strnstr.c test_strlen.c test_strlcpy.c test_strlcat.c test_strncmp.c test_strxchr.c test_strdup.c test_isxxx.c test_toxxx.c test_atoi.c test_calloc.c test_substr.c test_strjoin.c test_split.c test_strtrim.c test_itoa.c test_strmapi.c
 TESTS			:= $(addprefix $(TESTDIR)/,$(TESTNAME))
 TESTSRCS		:= $(addprefix $(TESTDIR)/,$(TESTSRCNAME))
 TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))
