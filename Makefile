@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/06 23:04:38 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/07 09:23:46 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCNAME			:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_mem
 				   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_isspace.c\
 				   ft_toupper.c ft_tolower.c\
 				   ft_atoi.c ft_calloc.c\
-				   ft_substr.c ft_strjoin.c
+				   ft_substr.c ft_strjoin.c ft_strtrim.c
 SRCDIR			:= .
 SRCS			:= $(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:= $(SRCNAME:%.c=%.o)
