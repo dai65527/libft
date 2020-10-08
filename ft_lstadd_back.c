@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:35:30 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/08 08:55:10 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:41:54 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void			ft_lstadd_back(t_list **lst, t_list *new)
 	elem = *lst;
 	while (elem->next)
 		elem = elem->next;
-	elem->next = new;	
+	elem->next = new;
 }

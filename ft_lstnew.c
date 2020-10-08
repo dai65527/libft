@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:09:54 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/08 08:47:08 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:42:37 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ t_list			*ft_lstnew(void *content)
 		return (NULL);
 	new_elem->content = content;
 	new_elem->next = NULL;
-	return new_elem;
+	return (new_elem);
 }
