@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 09:43:02 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/08 11:16:43 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/08 15:28:46 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void		ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = next;
 	}
+	*lst = NULL;
 }
