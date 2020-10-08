@@ -6,14 +6,13 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 18:37:19 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 18:19:50 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/08 13:18:45 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *restrict dst, const char *restrict src,
-				size_t dstsize)
+size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	int		flag_reach_dstsize;

@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/08 12:33:43 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/08 13:25:38 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ $(OUTPUTNAME):	$(OBJS) $(HEADERS)
 				ar cr $(OUTPUTS) $(OBJS)
 
 .PHONY:			bonus
-bonus:			$(BONUSOBJS) $(BONUSOBJS) $(HEADERS)
+bonus:			$(OBJS) $(BONUSOBJS) $(HEADERS)
 				ar cr $(OUTPUTS) $(OBJS) $(BONUSOBJS)
 
 .c.o:
