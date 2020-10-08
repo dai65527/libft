@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:09:54 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/08 08:17:20 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:47:08 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list			*ft_lstnew(void *content)
 	t_list	*new_elem;
 
 	new_elem = (t_list *)malloc(sizeof(t_list));
+	if (!new_elem)
+		return (NULL);
 	new_elem->content = content;
 	new_elem->next = NULL;
 	return new_elem;
