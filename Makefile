@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/08 14:49:34 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/10 10:45:22 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,9 @@ BONUSOBJS		:= $(addprefix $(OBJDIR)/,$(BONUSOBJNAME))
 HEADERNAME		:= libft.h
 HEADERDIR		:= .
 HEADERS			:= $(addprefix $(HEADERDIR)/,$(HEADERNAME))
-OUTPUTNAME		:= libft.a
+NAME			:= libft.a
 OUTPUTDIR		:= .
-OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(OUTPUTNAME))
+OUTPUTS			:= $(addprefix $(OUTPUTDIR)/,$(NAME))
 TESTDIR			:= .
 TESTNAME		:= test.out
 TESTSRCNAME		:= test.c
@@ -53,9 +53,9 @@ TESTINCLUDES	:= $(addprefix $(TESTDIR)/,$(TESTINCLUDENAME))
 .SUFFIXES:		.o .c
 
 .PHONY:			all
-all:			$(OUTPUTNAME)
+all:			$(NAME)
 
-$(OUTPUTNAME):	$(OBJS) $(HEADERS)
+$(NAME):	$(OBJS) $(HEADERS)
 				ar cr $(OUTPUTS) $(OBJS)
 
 .PHONY:			bonus
@@ -76,7 +76,7 @@ fclean:			clean
 .PHONY:			re
 re:				fclean all
 
-$(TESTNAME):	$(OUTPUTS) $(TESTSRCS) $(TESTINCLUDES) $(OUTPUTNAME)
+$(TESTNAME):	$(OUTPUTS) $(TESTSRCS) $(TESTINCLUDES) $(NAME)
 				rm -f $(TESTS)
 				$(CC) $(CFLAGS) $(TESTSRCS) $(addprefix -include ,$(TESTINCLUDES)) -L. -lft -o $(TESTS)
 
