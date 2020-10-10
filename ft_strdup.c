@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 16:44:47 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 18:15:09 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/11 08:01:51 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char		*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1);
 	dest = (char *)malloc(len + 1);
-	if (dest == 0)
-		return (0);
+	if (!dest)
+		return (NULL);
 	ft_strlcpy(dest, s1, len + 1);
 	return (dest);
 }

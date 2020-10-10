@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 18:00:03 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/07 18:25:33 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/11 07:57:11 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void			ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		putabs_fd(-n, fd);
+		putabs_fd(-(long)n, fd);
 	}
 	else
 		putabs_fd(n, fd);
