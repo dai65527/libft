@@ -6,13 +6,15 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 18:41:12 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 18:47:49 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/11 19:40:56 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_toupper(int c)
 {
-	if ('a' <= c && c <= 'z')
+	if (ft_islower(c))
 		return (c - 'a' + 'A');
 	return (c);
 }
