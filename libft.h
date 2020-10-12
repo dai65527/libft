@@ -6,17 +6,21 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/11 19:38:32 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:10:15 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
+# include <stddef.h>
 
-typedef unsigned char	t_uchar;
-typedef unsigned int	t_uint;
+typedef unsigned char		t_uchar;
+typedef unsigned int		t_uint;
+typedef unsigned short		t_ushort;
+typedef unsigned long		t_ulong;
+typedef long long			t_llong;
+typedef unsigned long long	t_ullong;
 
 typedef struct		s_list
 {

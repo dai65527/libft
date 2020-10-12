@@ -6,10 +6,11 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:57:27 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/07 07:56:14 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:12:16 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char		*ft_substr(char const *s, t_uint start, size_t len)
