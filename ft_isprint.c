@@ -6,13 +6,11 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:45:48 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/05 18:01:39 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/28 19:49:03 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isprint(int c)
 {
-	if (' ' <= c && c <= '~')
-		return (1);
-	return (0);
+	return (' ' <= c && c <= '~');
 }

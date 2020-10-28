@@ -6,15 +6,11 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 17:17:56 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/06 17:24:10 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/28 19:51:42 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isspace(int c)
 {
-	if (c == ' ')
-		return (1);
-	if ('\t' <= c && c <= '\r')
-		return (1);
-	return (0);
+	return (c == ' ' || ('\t' <= c && c <= '\r'));
 }

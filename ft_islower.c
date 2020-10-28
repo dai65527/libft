@@ -6,13 +6,13 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:22:27 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/11 19:35:12 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/28 19:52:48 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_islower(int c)
 {
-	if ('a' <= c && c <= 'z')
-		return (1);
-	return (0);
+	return ('a' <= c && c <= 'z');
 }
