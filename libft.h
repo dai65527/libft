@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/29 12:31:23 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/29 13:16:27 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,9 @@
 
 # include <stddef.h>
 
-/*
-** MACROs for get_next_line
-*/
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE	1024
-# endif
-
-# ifndef N_FDMAX
-#  define N_FDMAX		256
-# endif
-
-# define GNL_EXITENDF   0
-# define GNL_EXITENDL   1
-# define GNL_EXITERR    -1
+# define FD_STDIN	0
+# define FD_STDOUT	1
+# define FD_STDERR	2
 
 typedef unsigned char		t_uchar;
 typedef unsigned int		t_uint;

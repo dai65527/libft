@@ -6,13 +6,13 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 18:25:14 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/29 11:41:56 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/29 13:17:20 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "get_next_line.h"
 
 static int	gnl_errend(char **s, char **line, char *buf)
 {
