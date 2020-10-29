@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/29 11:36:19 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/29 12:31:23 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 # include <stddef.h>
 
+/*
+** MACROs for get_next_line
+*/
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE	42
+#  define BUFFER_SIZE	1024
 # endif
 
 # ifndef N_FDMAX
-#  define N_FDMAX		12800
+#  define N_FDMAX		256
 # endif
 
 # define GNL_EXITENDF   0
@@ -99,5 +102,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 int					get_next_line(int fd, char **line);
+int					ft_printf(const char *format, ...);
 
 #endif
