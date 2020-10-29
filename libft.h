@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/12 18:16:17 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/10/29 11:36:19 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,18 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE	42
+# endif
+
+# ifndef N_FDMAX
+#  define N_FDMAX		12800
+# endif
+
+# define GNL_EXITENDF   0
+# define GNL_EXITENDL   1
+# define GNL_EXITERR    -1
 
 typedef unsigned char		t_uchar;
 typedef unsigned int		t_uint;
@@ -73,6 +85,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+size_t				ft_putstrn_fd(char *s, int fd, size_t n);
 
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
@@ -85,6 +98,6 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
-size_t				ft_putstrn_fd(char *s, int fd, size_t n);
+int					get_next_line(int fd, char **line);
 
 #endif
