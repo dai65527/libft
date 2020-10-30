@@ -6,7 +6,7 @@
 #    By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/21 08:47:29 by dnakano           #+#    #+#              #
-#    Updated: 2020/10/29 13:11:20 by dnakano          ###   ########.fr        #
+#    Updated: 2020/10/30 22:15:44 by dnakano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,11 @@ BONUSSRCNAME	:=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 					ft_printf_putfloat_f_bonus.c \
 					ft_printf_putfloat_e_bonus.c \
 					ft_printf_putfloat_g_bonus.c \
-					ft_printf_store_n_bonus.c
+					ft_printf_store_n_bonus.c \
+					ft_atof.c ft_atof_dectobin_exp.c \
+					ft_atof_bintof.c ft_atof_dectobin_frac.c \
+					ft_atof_atobin.c ft_atof_atodec.c \
+					ft_atof_uint128_2.c ft_atof_uint128.c
 SRCDIR			:=	.
 SRCS			:=	$(addprefix $(SRCDIR)/,$(SRCNAME))
 OBJNAME			:=	$(SRCNAME:%.c=%.o)
