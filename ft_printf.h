@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 12:27:19 by dnakano           #+#    #+#             */
-/*   Updated: 2020/10/29 12:32:15 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/11/11 16:04:01 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,35 +44,37 @@ typedef	struct		s_printf_flags
 
 typedef struct		s_float
 {
-	u_int8_t		sign;
+	uint8_t			sign;
 	int32_t			exp;
-	u_int64_t		frac;
+	uint64_t		frac;
 	int8_t			int_dec[FLT_INTSIZE];
 	int8_t			mts_dec[FLT_MTSSIZE];
 }					t_float;
 
 char				*ft_printf_findflags(const char *format, va_list *ap,
-					t_printf_flags *flags);
+											t_printf_flags *flags);
 void				ft_printf_initflags(t_printf_flags *flags);
 void				ft_printf_getwidth(int width_arg, t_printf_flags *flags);
 
 void				ft_printf_putnbr_base_digit(t_llong nbr, t_uint radix,
 						int digit, int flag_upcase);
-void				ft_printf_putnbr_unsigned_base_digit(t_ullong nbr, t_uint radix,
-						int digit, int flag_upcase);
+void				ft_printf_putnbr_unsigned_base_digit(t_ullong nbr,
+								t_uint radix, int digit, int flag_upcase);
 int					ft_printf_putnbr_width_digit(t_llong nbr, t_uint radix,
-						t_printf_flags *flags);
+													t_printf_flags *flags);
 int					ft_printf_putnbr_unsigned_width_digit(t_ullong nbr,
-						t_uint radix, t_printf_flags *flags);
+										t_uint radix, t_printf_flags *flags);
 
-char				*ft_printf_putarg(const char *format, va_list *ap, int *count);
+char				*ft_printf_putarg(const char *format, va_list *ap,
+						int *count);
 int					ft_printf_putbyte(va_list *ap, t_printf_flags *flags);
 int					ft_printf_putstr(va_list *ap, t_printf_flags *flags);
-int					ft_printf_putint(char fc, va_list *ap, t_printf_flags *flags);
+int					ft_printf_putint(char fc, va_list *ap,
+										t_printf_flags *flags);
 int					ft_printf_putpointer(va_list *ap, t_printf_flags *flags);
 int					ft_printf_putpercent(t_printf_flags *flags);
 int					ft_printf_putfloat(const char fc, va_list *ap,
-						t_printf_flags *flags);
+											t_printf_flags *flags);
 
 void				ft_printf_putpadding(int width, t_printf_flags *flags);
 void				ft_printf_putsign(int flag_neg, t_printf_flags *flags);
@@ -84,7 +86,8 @@ int					ft_printf_putunsignedint(va_list *ap, t_printf_flags *flags,
 
 int					ft_printf_putfloat_f(t_float iflt, t_printf_flags *flags);
 int					ft_printf_putfloat_e(t_float iflt, t_printf_flags *flags);
-int					ft_printf_putfloat_e_get(t_float iflt, t_printf_flags *flags);
+int					ft_printf_putfloat_e_get(t_float iflt,
+												t_printf_flags *flags);
 int					ft_printf_putfloat_g(t_float iflt, t_printf_flags *flags);
 t_float				ft_store_iflt(double num);
 void				ft_itg_dbl(int8_t *itg, int size);
