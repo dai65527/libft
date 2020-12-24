@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 12:01:52 by dnakano           #+#    #+#             */
-/*   Updated: 2020/12/03 23:23:37 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/12/24 14:49:18 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_lstsort(t_list **lst, int (*cmp)());
+void				ft_lstrm_if(t_list **lst, void *ref, int (*cmp)(),
+														void (*del)(void *));
 
 int					get_next_line(int fd, char **line);
 int					ft_printf(const char *format, ...);
