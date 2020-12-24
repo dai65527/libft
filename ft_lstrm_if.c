@@ -6,7 +6,7 @@
 /*   By: dnakano <dnakano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 14:37:03 by dnakano           #+#    #+#             */
-/*   Updated: 2020/12/24 14:48:00 by dnakano          ###   ########.fr       */
+/*   Updated: 2020/12/24 15:34:04 by dnakano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void		ft_lstrm_if(t_list **lst, void *ref, int (*cmp)(),
 	t_list		*lstptr;
 	t_list		*lstptr_prev;
 
-	if (lst || *lst)
+	if (!lst || !(*lst))
 		return ;
 	lstptr = *lst;
 	lstptr_prev = NULL;
