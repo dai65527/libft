@@ -62,11 +62,11 @@ Refer to subject of 42cursus for detail.
 Utility functions to handle a forward list struct.
 
 ```c
-typedef struct		s_list
+typedef struct      s_list
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 ```
 
 - ft_lstnew: create new list
